@@ -178,3 +178,15 @@ input:focus {
     color: var(--red);
     font-weight: 700;
 }
+
+/**** Responsive design tablette ****/
+
+@media screen and (max-width: 1024px) {
+    .main__content {
+        flex-direction: column;
+    }
+
+    section {
+        width: 100%;
+    }
+}
