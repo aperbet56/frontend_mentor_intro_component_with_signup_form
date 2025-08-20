@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontend mantor | Intro component with sign form</title>
+    <!-- Importation de la favicon -->
+    <link
+      rel="shortcut icon"
+      href="images/favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <!-- Importation des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    />
+    <!-- Importation des styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Début du main -->
+    <main class="main__content">
+      <!-- Début de la section description -->
+      <section class="description">
+        <h1 class="title">Learn to code by watching others</h1>
+        <p class="text">
+          See how experienced developers solve problems in real-time. Watching
+          scripted tutorials is great, but understanding how developers think is
+          invaluable.
+        </p>
+      </section>
+      <!-- Fin de la section description -->
+      <!-- Début de la section signup -->
+      <section class="signup">
+        <button class="try__btn">
+          <span>Try it free 7 days</span> then $20/mo. thereafter
+        </button>
+        <form class="signup__form">
+          <div class="input__img">
+            <input type="text" class="firstName" placeholder="First Name" />
+            <img src="images/icon-error.svg" alt="error" class="error__img" />
+          </div>
+          <p class="error__message" id="firstName__error"></p>
+          <div class="input__img">
+            <input type="text" class="lastName" placeholder="Last Name" />
+            <img src="images/icon-error.svg" alt="error" class="error__img" />
+          </div>
+          <p class="error__message" id="lastName__error"></p>
+          <div class="input__img">
+            <input type="email" class="email" placeholder="Email Address" />
+            <img src="images/icon-error.svg" alt="error" class="error__img" />
+          </div>
+          <p class="error__message" id="email__error"></p>
+          <div class="input__img">
+            <input type="password" class="password" placeholder="Password" />
+            <img src="images/icon-error.svg" alt="error" class="error__img" />
+          </div>
+          <p class="error__message" id="password__error"></p>
+          <button type="submit" class="submit__btn">
+            Claim your free trial
+          </button>
+          <p class="terms">
+            By clicking the button, you are agreeing to our
+            <span>Terms and Services</span>
+          </p>
+        </form>
+      </section>
+      <!-- Fin de la section signup -->
+    </main>
+    <!-- Fin du main -->
+  </body>
+</html>
