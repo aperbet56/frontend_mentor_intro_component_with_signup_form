@@ -190,3 +190,36 @@ input:focus {
         width: 100%;
     }
 }
+
+/**** Responsive design version mobile ****/
+
+@media screen and (max-width: 767px) {
+    body {
+        background-image: url(images/bg-intro-mobile.png);
+    }
+
+    .main__content {
+        padding: 80px 30px;
+    }
+
+    section {
+        padding: 0;
+    }
+
+    .description {
+        margin-bottom: 60px;
+    }
+
+    .title {
+        font-size: 30px;
+    }
+
+    .title,
+    .text {
+        text-align: center;
+    }
+
+    input {
+        font-size: 14px;
+    }
+}
