@@ -18,7 +18,7 @@ input {
 }
 
 p {
-    line-height: 1.5;
+    line-height: 1.7;
 }
 
 /**** Variables CSS ****/
@@ -47,7 +47,6 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-color: var(--red);
-    /*z-index: -1;*/
 }
 
 /**** main ****/
@@ -86,7 +85,7 @@ section {
 
 button,
 input {
-    font-size: 16px;
+    font-size: var(--fontSize);
     font-weight: 600;
     font-family: "Poppins", sans-serif;
 }
@@ -143,7 +142,7 @@ input:focus {
     top: 21%;
     right: 6%;
     width: 22px;
-    /*display: none;*/
+    display: none;
 }
 
 .error__message {
@@ -164,6 +163,7 @@ input:focus {
     text-transform: uppercase;
     color: #ffffff;
     font-weight: 700;
+    box-shadow: 2px 2px 5px -2px #006b00;
     transition: opacity 0.3s ease-in-out;
 }
 
