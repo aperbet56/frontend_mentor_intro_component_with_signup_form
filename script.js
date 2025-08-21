@@ -130,15 +130,21 @@ const passwordValidation = (password) => {
   // Ecoute de l'événement "input" sur l'input password
   password.addEventListener("input", (e) => {
     e.preventDefault();
-    if (regexPassword.test(password.value) == false) {
+    if (password.value.trim() == "") {
       password.style.borderColor = "var(--red)";
       password.style.color = "var(--red)";
       passwordErrorIcon.style.display = "block";
-      passwordErrorMessage.textContent = "Password cannot be empty";
+      passwordErrorMessage.textContent = "Email cannot be empty";
+    } else if (regexPassword.test(password.value) == false) {
+      password.style.borderColor = "var(--red)";
+      password.style.color = "var(--red)";
+      passwordErrorIcon.style.display = "block";
+      passwordErrorMessage.textContent =
+        "Password must contain between 8 and 16 characters including uppercase letters, lowercase letters, numbers and specials characters";
       return false;
     } else {
       password.style.borderColor = "var(--green)";
-      password.style.color = "var(--red)";
+      password.style.color = "var(--green)";
       passwordErrorIcon.style.display = "none";
       passwordErrorMessage.textContent = "";
       return true;
