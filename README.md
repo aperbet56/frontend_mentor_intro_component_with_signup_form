@@ -23,3 +23,19 @@ les utilisateurs devraient pouvoir :
 ## Démonstration
 
 Lien vers le projet : https://aperbet56.github.io/frontend_mentor_intro_component_with_signup_form/
+
+## Projet développé avec
+
+- Utilisation des balises sémantiques HTML5
+- CSS3
+- Flexbox
+- Animations CSS
+- Variables CSS
+- Desktop first
+- Responsive design
+- Utilisation d'un normaliseur : le fichier normalize.css
+- Importation de la police "Poppins"
+- Commentaires HTML
+- Commentaires CSS
+- JavaScript
+- Code JavaScript commenté
