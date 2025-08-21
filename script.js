@@ -74,3 +74,27 @@ const lastNameValidation = (lastName) => {
 };
 // Appel de la fonction lastNameValidation
 lastNameValidation(lastName);
+
+/**
+ * Déclaration de la fonction emailValidation pour la validation du champ email
+ * @param {String} email
+ */
+const emailValidation = (email) => {
+  // Ecoute de l'événement "input" sur l'input email
+  email.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (regexEmail.test(email.value) == false) {
+      email.style.borderColor = "var(--red)";
+      emailErrorIcon.style.display = "block";
+      emailErrorMessage.textContent = "Last Name cannot be empty";
+      return false;
+    } else {
+      email.style.borderColor = "var(--green)";
+      emailErrorIcon.style.display = "none";
+      emailErrorMessage.textContent = "";
+      return true;
+    }
+  });
+};
+// Appel de la fonction emailValidation
+emailValidation(email);
