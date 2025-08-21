@@ -67,11 +67,17 @@ const lastNameValidation = (lastName) => {
   // Ecoute de l'événement "input" sur l'input lastName
   lastName.addEventListener("input", (e) => {
     e.preventDefault();
-    if (regexName.test(lastName.value) == false) {
+    if (lastName.value.trim() == "") {
       lastName.style.borderColor = "var(--red)";
       lastName.style.color = "var(--red)";
       lastNameErrorIcon.style.display = "block";
-      lastNameErrorMessage.textContent = "Last Name cannot be empty";
+      lastNameErrorMessage.textContent = "First Name cannot be empty";
+    } else if (regexName.test(lastName.value) == false) {
+      lastName.style.borderColor = "var(--red)";
+      lastName.style.color = "var(--red)";
+      lastNameErrorIcon.style.display = "block";
+      lastNameErrorMessage.textContent =
+        "Last Name must begin with a capital letter";
       return false;
     } else {
       lastName.style.borderColor = "var(--green)";
