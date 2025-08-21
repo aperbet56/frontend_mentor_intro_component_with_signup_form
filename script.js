@@ -37,11 +37,13 @@ const firstNameValidation = (firstName) => {
     e.preventDefault();
     if (regexName.test(firstName.value) == false) {
       firstName.style.borderColor = "var(--red)";
+      firstName.style.color = "var(--red)";
       firstNameErrorIcon.style.display = "block";
       firstNameErrorMessage.textContent = "First Name cannot be empty";
       return false;
     } else {
       firstName.style.borderColor = "var(--green)";
+      firstName.style.color = "var(--green)";
       firstNameErrorIcon.style.display = "none";
       firstNameErrorMessage.textContent = "";
       return true;
@@ -61,11 +63,13 @@ const lastNameValidation = (lastName) => {
     e.preventDefault();
     if (regexName.test(lastName.value) == false) {
       lastName.style.borderColor = "var(--red)";
+      lastName.style.color = "var(--red)";
       lastNameErrorIcon.style.display = "block";
       lastNameErrorMessage.textContent = "Last Name cannot be empty";
       return false;
     } else {
       lastName.style.borderColor = "var(--green)";
+      lastName.style.color = "var(--green)";
       lastNameErrorIcon.style.display = "none";
       lastNameErrorMessage.textContent = "";
       return true;
@@ -85,15 +89,18 @@ const emailValidation = (email) => {
     e.preventDefault();
     if (email.value.trim() == "") {
       email.style.borderColor = "var(--red)";
+      email.style.color = "var(--red)";
       emailErrorIcon.style.display = "block";
       emailErrorMessage.textContent = "Email cannot be empty";
     } else if (regexEmail.test(email.value) == false) {
       email.style.borderColor = "var(--red)";
+      email.style.color = "var(--red)";
       emailErrorIcon.style.display = "block";
       emailErrorMessage.textContent = "Looks like this is not an email";
       return false;
     } else {
       email.style.borderColor = "var(--green)";
+      email.style.color = "var(--green)";
       emailErrorIcon.style.display = "none";
       emailErrorMessage.textContent = "";
       return true;
@@ -113,11 +120,13 @@ const passwordValidation = (password) => {
     e.preventDefault();
     if (regexPassword.test(password.value) == false) {
       password.style.borderColor = "var(--red)";
+      password.style.color = "var(--red)";
       passwordErrorIcon.style.display = "block";
       passwordErrorMessage.textContent = "Password cannot be empty";
       return false;
     } else {
       password.style.borderColor = "var(--green)";
+      password.style.color = "var(--red)";
       passwordErrorIcon.style.display = "none";
       passwordErrorMessage.textContent = "";
       return true;
@@ -152,8 +161,8 @@ const send = () => {
       alert("Registration confirmed!");
       // Rechargement de la page
       window.location.reload();
-      lastName.value = "";
       firstName.value = "";
+      lastName.value = "";
       email.value = "";
       password.value = "";
       window.scrollTo(0, 0);
