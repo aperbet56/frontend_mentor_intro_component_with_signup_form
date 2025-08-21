@@ -83,10 +83,14 @@ const emailValidation = (email) => {
   // Ecoute de l'événement "input" sur l'input email
   email.addEventListener("input", (e) => {
     e.preventDefault();
-    if (regexEmail.test(email.value) == false) {
+    if (email.value.trim() == "") {
       email.style.borderColor = "var(--red)";
       emailErrorIcon.style.display = "block";
       emailErrorMessage.textContent = "Email cannot be empty";
+    } else if (regexEmail.test(email.value) == false) {
+      email.style.borderColor = "var(--red)";
+      emailErrorIcon.style.display = "block";
+      emailErrorMessage.textContent = "Looks like this is not an email";
       return false;
     } else {
       email.style.borderColor = "var(--green)";
