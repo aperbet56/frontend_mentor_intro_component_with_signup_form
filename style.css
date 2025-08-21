@@ -147,11 +147,11 @@ input:focus {
 
 .error__message {
     display: block;
-    text-align: left;
+    font-style: italic;
+    text-align: right;
     color: var(--red);
-    margin-top: 5px;
-    margin-right: 20px;
-    margin-left: 50%;
+    margin-top: -10px;
+    margin-bottom: 20px;
 }
 
 .submit__btn {
