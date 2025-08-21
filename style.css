@@ -154,10 +154,6 @@ input:focus {
     margin-left: 50%;
 }
 
-.error__border {
-    border: 2px solid var(--red);
-}
-
 .submit__btn {
     background-color: var(--green);
     text-transform: uppercase;
