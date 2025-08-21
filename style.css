@@ -221,7 +221,15 @@ input:focus {
     }
 
     input {
-        font-size: 14px;
         padding: 15px;
+    }
+
+    input,
+    .error__message {
+        font-size: 14px;
+    }
+
+    .error__img {
+        width: 20px;
     }
 }
