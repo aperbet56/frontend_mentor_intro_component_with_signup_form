@@ -26,3 +26,28 @@ const regexName = /^[A-Z][A-Za-z\é\è\ê\ô\-]+$/;
 const regexEmail = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$/;
 const regexPassword =
   /^(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*\W)(?!.* ).{8,16}$/;
+
+/**
+ * Fonction firstNameValidation pour la validation du champ prénom
+ * @param {String} firstName
+ */
+
+const firstNameValidation = (firstName) => {
+  // Ecoute de l'événement "input" sur l'input firstName
+  firstName.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (regexName.test(firstName.value) == false) {
+      firstName.style.borderColor = "var(--red)";
+      firstNameErrorIcon.style.display = "block";
+      firstNameErrorMessage.textContent = "First Name cannot be empty";
+      return false;
+    } else {
+      firstName.style.borderColor = "var(--green)";
+      firstNameErrorIcon.style.display = "none";
+      firstNameErrorMessage.textContent = "";
+      return true;
+    }
+  });
+};
+// Appel de la fonction firstNameValidation
+firstNameValidation(firstName);
