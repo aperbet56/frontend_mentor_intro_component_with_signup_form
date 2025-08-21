@@ -35,11 +35,17 @@ const firstNameValidation = (firstName) => {
   // Ecoute de l'événement "input" sur l'input firstName
   firstName.addEventListener("input", (e) => {
     e.preventDefault();
-    if (regexName.test(firstName.value) == false) {
+    if (firstName.value.trim() == "") {
       firstName.style.borderColor = "var(--red)";
       firstName.style.color = "var(--red)";
       firstNameErrorIcon.style.display = "block";
       firstNameErrorMessage.textContent = "First Name cannot be empty";
+    } else if (regexName.test(firstName.value) == false) {
+      firstName.style.borderColor = "var(--red)";
+      firstName.style.color = "var(--red)";
+      firstNameErrorIcon.style.display = "block";
+      firstNameErrorMessage.textContent =
+        "First Name must begin with a capital letter";
       return false;
     } else {
       firstName.style.borderColor = "var(--green)";
