@@ -31,7 +31,6 @@ const regexPassword =
  * Fonction firstNameValidation pour la validation du champ prénom
  * @param {String} firstName
  */
-
 const firstNameValidation = (firstName) => {
   // Ecoute de l'événement "input" sur l'input firstName
   firstName.addEventListener("input", (e) => {
@@ -51,3 +50,27 @@ const firstNameValidation = (firstName) => {
 };
 // Appel de la fonction firstNameValidation
 firstNameValidation(firstName);
+
+/**
+ * Déclaration de la fonction lastNameValidation pour la validation du champ nom
+ *  @param {String} lastName
+ */
+const lastNameValidation = (lastName) => {
+  // Ecoute de l'événement "input" sur l'input lastName
+  lastName.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (regexName.test(lastName.value) == false) {
+      lastName.style.borderColor = "var(--red)";
+      lastNameErrorIcon.style.display = "block";
+      lastNameErrorMessage.textContent = "Last Name cannot be empty";
+      return false;
+    } else {
+      lastName.style.borderColor = "var(--green)";
+      lastNameErrorIcon.style.display = "none";
+      lastNameErrorMessage.textContent = "";
+      return true;
+    }
+  });
+};
+// Appel de la fonction lastNameValidation
+lastNameValidation(lastName);
