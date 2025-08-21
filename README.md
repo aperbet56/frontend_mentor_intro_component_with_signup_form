@@ -6,7 +6,7 @@
 
 Voici ma solution au challenge : Frontend Mentor - Intro component with sign up form
 
-[Frontend Mentor](https://www.frontendmentor.io) challenges help you improve your coding skills by building realistic projects.
+[Frontend Mentor](https://www.frontendmentor.io) propose des défis afin d'améliorer les compétences en codage en créant des projets réalistes.
 
 ## Le challenge
 
@@ -39,3 +39,4 @@ Lien vers le projet : https://aperbet56.github.io/frontend_mentor_intro_componen
 - Commentaires CSS
 - JavaScript
 - Code JavaScript commenté
+- Regex
