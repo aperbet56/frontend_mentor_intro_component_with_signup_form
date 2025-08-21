@@ -161,6 +161,28 @@ const send = () => {
     // Suppression du comportement par défaut
     e.preventDefault();
     if (
+      firstName.value.trim() == "" &&
+      lastName.value.trim() == "" &&
+      email.value.trim() == "" &&
+      password.value.trim() == ""
+    ) {
+      firstName.style.borderColor = "var(--red)";
+      firstName.style.color = "var(--red)";
+      firstNameErrorIcon.style.display = "block";
+      firstNameErrorMessage.textContent = "First Name cannot be empty";
+      lastName.style.borderColor = "var(--red)";
+      lastName.style.color = "var(--red)";
+      lastNameErrorIcon.style.display = "block";
+      lastNameErrorMessage.textContent = "First Name cannot be empty";
+      email.style.borderColor = "var(--red)";
+      email.style.color = "var(--red)";
+      emailErrorIcon.style.display = "block";
+      emailErrorMessage.textContent = "Email cannot be empty";
+      password.style.borderColor = "var(--red)";
+      password.style.color = "var(--red)";
+      passwordErrorIcon.style.display = "block";
+      passwordErrorMessage.textContent = "Email cannot be empty";
+    } else if (
       regexName.test(firstName.value) == false ||
       regexName.test(lastName.value) == false ||
       regexEmail.test(email.value) == false ||
