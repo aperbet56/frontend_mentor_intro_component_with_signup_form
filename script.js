@@ -86,7 +86,7 @@ const emailValidation = (email) => {
     if (regexEmail.test(email.value) == false) {
       email.style.borderColor = "var(--red)";
       emailErrorIcon.style.display = "block";
-      emailErrorMessage.textContent = "Last Name cannot be empty";
+      emailErrorMessage.textContent = "Email cannot be empty";
       return false;
     } else {
       email.style.borderColor = "var(--green)";
@@ -98,3 +98,27 @@ const emailValidation = (email) => {
 };
 // Appel de la fonction emailValidation
 emailValidation(email);
+
+/**
+ * Déclaration de la fonction passwordValidation pour la validation du champ email
+ * @param {String} password
+ */
+const passwordValidation = (password) => {
+  // Ecoute de l'événement "input" sur l'input password
+  password.addEventListener("input", (e) => {
+    e.preventDefault();
+    if (regexPassword.test(password.value) == false) {
+      password.style.borderColor = "var(--red)";
+      passwordErrorIcon.style.display = "block";
+      passwordErrorMessage.textContent = "Password cannot be empty";
+      return false;
+    } else {
+      password.style.borderColor = "var(--green)";
+      passwordErrorIcon.style.display = "none";
+      passwordErrorMessage.textContent = "";
+      return true;
+    }
+  });
+};
+// Appel de la fonction emailValidation
+passwordValidation(password);
